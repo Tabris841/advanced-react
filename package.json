@@ -7,8 +7,9 @@
   "author": "Anton Todorov",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --exec babel-node lib/server.js",
-    "webpack": "webpack -wd"
+    "dev": "set NODE_PATH=./lib&& nodemon --exec babel-node lib/server.js",
+    "webpack": "webpack -wd",
+    "test": "jest --watch"
   },
   "babel": {
     "presets": [
@@ -19,10 +20,16 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.0.1",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.2",
     "eslint": "^4.9.0",
-    "eslint-plugin-react": "^7.4.0"
+    "eslint-plugin-react": "^7.4.0",
+    "jest": "^21.2.1",
+    "react-addons-perf": "^15.4.2",
+    "react-test-renderer": "16"
   },
   "dependencies": {
+    "axios": "^0.17.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -32,7 +39,9 @@
     "babel-preset-stage-2": "^6.24.1",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
+    "lodash": "^4.17.4",
     "nodemon": "^1.12.1",
+    "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "webpack": "^3.8.1"
